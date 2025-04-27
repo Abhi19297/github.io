@@ -61,11 +61,9 @@ export default function Home() {
               have worked on a variety of projects, honing my skills in Kotlin, Java,
               and the Android Jetpack suite. I also have 3 years of experience in Angular for web development.
             </p>
-            <p className="mt-4 leading-relaxed">
-              My Android development expertise includes:
-            </p>
+           
             
-            <ul className="list-disc list-inside mt-2 pl-4">
+            <ul className="list-disc list-inside mt-4 pl-4">
               <li>Kotlin, Java</li>
               <li>Android Jetpack (Compose, Navigation, ViewModel, LiveData)</li>
               <li>MVVM, Clean Architecture</li>
@@ -73,7 +71,9 @@ export default function Home() {
               <li>RESTful APIs, JSON</li>
               <li>UI/UX Design</li>
             </ul>
-            
+             <p className="mt-4 leading-relaxed">
+              My Android development expertise includes:
+            </p>
             <p className="mt-4 leading-relaxed">
               I am dedicated to writing clean, maintainable code and creating intuitive
               user interfaces.
@@ -313,4 +313,3 @@ export default function Home() {
     </div>
   );
 }
-
