@@ -190,8 +190,8 @@ export default function Home() {
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <Card className="shadow-md rounded-lg">
+              <div className="w-full">
+                <Card className="shadow-md rounded-lg h-full">
                   <CardHeader>
                     <CardTitle>Mconnect Insurance App</CardTitle>
                     <CardDescription>SBI Life Insurance app for agents.</CardDescription>
@@ -205,8 +205,8 @@ export default function Home() {
                 </Card>
               </div>
 
-              <div>
-                <Card className="shadow-md rounded-lg">
+              <div className="w-full">
+                <Card className="shadow-md rounded-lg h-full">
                   <CardHeader>
                     <CardTitle>Mconnect PWA</CardTitle>
                     <CardDescription>Angular app for agents and clients, similar to the Android version.</CardDescription>
@@ -220,8 +220,8 @@ export default function Home() {
                 </Card>
               </div>
 
-              <div>
-                <Card className="shadow-md rounded-lg">
+              <div className="w-full">
+                <Card className="shadow-md rounded-lg h-full">
                   <CardHeader>
                     <CardTitle>Premium Payer</CardTitle>
                     <CardDescription>Angular app for seamless KYC validation.</CardDescription>
@@ -235,8 +235,8 @@ export default function Home() {
                 </Card>
               </div>
 
-              <div>
-                <Card className="shadow-md rounded-lg">
+              <div className="w-full">
+                <Card className="shadow-md rounded-lg h-full">
                   <CardHeader>
                     <CardTitle>Better You, Your Growth Buddy</CardTitle>
                     <CardDescription>Android eBooks app with journaling and goal-setting features.</CardDescription>
@@ -251,8 +251,8 @@ export default function Home() {
                 </Card>
               </div>
 
-              <div>
-                <Card className="shadow-md rounded-lg">
+              <div className="w-full">
+                <Card className="shadow-md rounded-lg h-full">
                   <CardHeader>
                     <CardTitle>Collekto (Field & Manage)</CardTitle>
                     <CardDescription>Android app for loan recovery agents.</CardDescription>
