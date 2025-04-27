@@ -158,10 +158,7 @@ export default function Home() {
                   </p>
                   <p>Designed for agents to manage sales, track performance, purchase policies, and upload documents.</p>
                   <div className="flex mt-4 space-x-2">
-                    <Button variant="outline" size="sm" className="rounded-full">
-                      GitHub
-                    </Button>
-                    {/* Removed Play Store button as it's an internal app */}
+                    {/* Removed GitHub button as it's an internal app */}
                   </div>
                 </CardContent>
               </Card>
@@ -178,10 +175,7 @@ export default function Home() {
                   </p>
                   <p>Cross-platform functionality, extending to iOS and other clients, helping agents grow the SBI Life business efficiently.</p>
                   <div className="flex mt-4 space-x-2">
-                    <Button variant="outline" size="sm" className="rounded-full">
-                      GitHub
-                    </Button>
-                  </div>
+                   </div>
                 </CardContent>
               </Card>
 
@@ -197,10 +191,7 @@ export default function Home() {
                   </p>
                   <p>Seamless KYC validation, supporting CKYC, EKYC, and Physical KYC processes.</p>
                   <div className="flex mt-4 space-x-2">
-                    <Button variant="outline" size="sm" className="rounded-full">
-                      GitHub
-                    </Button>
-                  </div>
+                   </div>
                 </CardContent>
               </Card>
 
@@ -217,7 +208,7 @@ export default function Home() {
                   <p>Paid eBooks app designed for reading, with additional features for journaling, creating strategy/action plans, and setting goals.</p>
                   <div className="flex mt-4 space-x-2">
                     <Button variant="outline" size="sm" className="rounded-full">
-                      GitHub
+                      Play Store
                     </Button>
                   </div>
                 </CardContent>
@@ -235,9 +226,6 @@ export default function Home() {
                   </p>
                   <p>Helps agents efficiently locate and visit customers for loan recovery by integrating Google Maps API.</p>
                   <div className="flex mt-4 space-x-2">
-                    <Button variant="outline" size="sm" className="rounded-full">
-                      GitHub
-                    </Button>
                   </div>
                 </CardContent>
               </Card>
@@ -313,3 +301,4 @@ export default function Home() {
     </div>
   );
 }
+
