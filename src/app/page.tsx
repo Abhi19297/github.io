@@ -13,6 +13,7 @@ import {
   Phone,
 } from "lucide-react";
 import Image from "next/image";
+import {motion} from "framer-motion";
 
 const profileImage = "https://picsum.photos/200/200";
 
@@ -27,10 +28,20 @@ function PlayStoreButton() {
 }
 
 export default function Home() {
+  const fadeInAnimation = {
+    initial: {opacity: 0, y: 20},
+    animate: {opacity: 1, y: 0, transition: {duration: 0.5, ease: "easeInOut"}},
+  };
+
   return (
     <div className="container mx-auto py-10">
       {/* Hero Section */}
-      <section className="text-center mb-12">
+      <motion.section
+        className="text-center mb-12"
+        variants={fadeInAnimation}
+        initial="initial"
+        animate="animate"
+      >
         <div className="relative rounded-full overflow-hidden h-40 w-40 mx-auto mb-4 shadow-md">
           <Image
             src={profileImage}
@@ -52,10 +63,15 @@ export default function Home() {
           <Button variant="outline" className="rounded-full">View Projects</Button>
           <Button className="rounded-full">Download Resume</Button>
         </div>
-      </section>
+      </motion.section>
 
       {/* About Me */}
-      <section className="mb-12">
+      <motion.section
+        className="mb-12"
+        variants={fadeInAnimation}
+        initial="initial"
+        animate="animate"
+      >
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">About Me</CardTitle>
@@ -87,10 +103,15 @@ export default function Home() {
             </p>
           </CardContent>
         </Card>
-      </section>
+      </motion.section>
 
       {/* Skills */}
-      <section className="mb-12">
+      <motion.section
+        className="mb-12"
+        variants={fadeInAnimation}
+        initial="initial"
+        animate="animate"
+      >
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Skills</CardTitle>
@@ -140,10 +161,15 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
-      </section>
+      </motion.section>
 
       {/* Projects */}
-      <section className="mb-12">
+      <motion.section
+        className="mb-12"
+        variants={fadeInAnimation}
+        initial="initial"
+        animate="animate"
+      >
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Projects</CardTitle>
@@ -229,10 +255,15 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
-      </section>
+      </motion.section>
 
       {/* Experience */}
-      <section className="mb-12">
+      <motion.section
+        className="mb-12"
+        variants={fadeInAnimation}
+        initial="initial"
+        animate="animate"
+      >
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Experience</CardTitle>
@@ -259,10 +290,14 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
-      </section>
+      </motion.section>
 
       {/* Contact Section */}
-      <section>
+      <motion.section
+        variants={fadeInAnimation}
+        initial="initial"
+        animate="animate"
+      >
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Contact</CardTitle>
@@ -282,7 +317,7 @@ export default function Home() {
             <p className="mt-4 text-gray-600 dark:text-gray-300">Kharghar, Navi Mumbai 410210</p>
           </CardContent>
         </Card>
-      </section>
+      </motion.section>
     </div>
   );
 }
