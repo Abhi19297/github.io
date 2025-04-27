@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import {motion} from "framer-motion";
+import {useEffect, useRef} from "react";
 
 const profileImage = "https://picsum.photos/200/200";
 
@@ -32,6 +33,33 @@ export default function Home() {
     initial: {opacity: 0, y: 20},
     animate: {opacity: 1, y: 0, transition: {duration: 0.5, ease: "easeInOut"}},
   };
+
+  const sectionRefs = useRef<(HTMLElement | null)[]>([null, null, null, null, null]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fadeIn');
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    sectionRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => {
+      sectionRefs.current.forEach((ref) => {
+        if (ref) observer.unobserve(ref);
+      });
+    };
+  }, []);
 
   return (
     <div className="container mx-auto py-10">
@@ -66,12 +94,7 @@ export default function Home() {
       </motion.section>
 
       {/* About Me */}
-      <motion.section
-        className="mb-12"
-        variants={fadeInAnimation}
-        initial="initial"
-        animate="animate"
-      >
+      <section className="mb-12" ref={sectionRefs.current[0]}>
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">About Me</CardTitle>
@@ -103,15 +126,10 @@ export default function Home() {
             </p>
           </CardContent>
         </Card>
-      </motion.section>
+      </section>
 
       {/* Skills */}
-      <motion.section
-        className="mb-12"
-        variants={fadeInAnimation}
-        initial="initial"
-        animate="animate"
-      >
+      <section className="mb-12" ref={sectionRefs.current[1]}>
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Skills</CardTitle>
@@ -161,15 +179,10 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
-      </motion.section>
+      </section>
 
       {/* Projects */}
-      <motion.section
-        className="mb-12"
-        variants={fadeInAnimation}
-        initial="initial"
-        animate="animate"
-      >
+      <section className="mb-12" ref={sectionRefs.current[2]}>
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Projects</CardTitle>
@@ -255,15 +268,10 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
-      </motion.section>
+      </section>
 
       {/* Experience */}
-      <motion.section
-        className="mb-12"
-        variants={fadeInAnimation}
-        initial="initial"
-        animate="animate"
-      >
+      <section className="mb-12" ref={sectionRefs.current[3]}>
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Experience</CardTitle>
@@ -290,18 +298,14 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
-      </motion.section>
+      </section>
 
       {/* Contact Section */}
-      <motion.section
-        variants={fadeInAnimation}
-        initial="initial"
-        animate="animate"
-      >
+      <section ref={sectionRefs.current[4]}>
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Contact</CardTitle>
-            <CardDescription className="text-gray-600 dark:text-gray-400">Email, Phone, and LinkedIn profile links</CardDescription>
+            <CardDescription className="text-gray-600 dark:text-gray-400">Email and Phone</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="flex space-x-4">
@@ -311,13 +315,11 @@ export default function Home() {
               <a href="tel:+918779007101" className="text-muted-foreground hover:text-primary transition-colors">
                 <Phone className="h-5 w-5" />
               </a>
-              <a href="https://www.linkedin.com/in/abhijeet-thakur-443273162/" className="text-muted-foreground hover:text-primary transition-colors">
-              </a>
             </div>
             <p className="mt-4 text-gray-600 dark:text-gray-300">Kharghar, Navi Mumbai 410210</p>
           </CardContent>
         </Card>
-      </motion.section>
+      </section>
     </div>
   );
 }
