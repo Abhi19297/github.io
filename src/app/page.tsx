@@ -55,15 +55,17 @@ export default function Home() {
             </p>
             <p className="mt-4">
               My Android development expertise includes:
-              <ul className="list-disc list-inside mt-2">
-                <li>Kotlin, Java</li>
-                <li>Android Jetpack (Compose, Navigation, ViewModel, LiveData)</li>
-                <li>MVVM, Clean Architecture</li>
-                <li>Room, Firebase</li>
-                <li>RESTful APIs, JSON</li>
-                <li>UI/UX Design</li>
-              </ul>
             </p>
+            
+            <ul className="list-disc list-inside mt-2">
+              <li>Kotlin, Java</li>
+              <li>Android Jetpack (Compose, Navigation, ViewModel, LiveData)</li>
+              <li>MVVM, Clean Architecture</li>
+              <li>Room, Firebase</li>
+              <li>RESTful APIs, JSON</li>
+              <li>UI/UX Design</li>
+            </ul>
+            
             <p className="mt-4">
               I am dedicated to writing clean, maintainable code and creating intuitive
               user interfaces.
