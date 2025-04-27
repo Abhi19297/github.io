@@ -1,3 +1,4 @@
+'use client';
 
 import {Button} from "@/components/ui/button";
 import {
@@ -8,14 +9,22 @@ import {
   CardTitle
 } from "@/components/ui/card";
 import {
-  Github,
-  Linkedin,
   Mail,
   Phone,
 } from "lucide-react";
 import Image from "next/image";
 
 const profileImage = "https://picsum.photos/200/200";
+
+function PlayStoreButton() {
+  const handlePlayStoreClick = () => {
+    window.open("https://play.google.com/store/apps/details?id=com.prolifiquetech.betteryou&hl=en_IN&pli=1", "_blank");
+  };
+
+  return (
+    <Button variant="outline" size="sm" className="rounded-full" onClick={handlePlayStoreClick}>Play Store</Button>
+  );
+}
 
 export default function Home() {
   return (
@@ -61,8 +70,6 @@ export default function Home() {
               have worked on a variety of projects, honing my skills in Kotlin, Java,
               and the Android Jetpack suite. I also have 3 years of experience in Angular for web development.
             </p>
-           
-            
             <ul className="list-disc list-inside mt-4 pl-4">
               <li>Kotlin, Java</li>
               <li>Android Jetpack (Compose, Navigation, ViewModel, LiveData)</li>
@@ -71,7 +78,7 @@ export default function Home() {
               <li>RESTful APIs, JSON</li>
               <li>UI/UX Design</li>
             </ul>
-             <p className="mt-4 leading-relaxed">
+            <p className="mt-4 leading-relaxed">
               My Android development expertise includes:
             </p>
             <p className="mt-4 leading-relaxed">
@@ -140,95 +147,85 @@ export default function Home() {
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Projects</CardTitle>
-            <CardDescription className="text-gray-600 dark:text-gray-400">
-              Key projects showcasing Android and Angular development skills.
-            </CardDescription>
+            <CardDescription className="text-gray-600 dark:text-gray-400">Key projects showcasing Android and Angular development skills.</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Project 1 */}
-              <Card className="shadow-md rounded-lg">
-                <CardHeader>
-                  <CardTitle>Mconnect Insurance App</CardTitle>
-                  <CardDescription>SBI Life Insurance app for agents.</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    <strong>Tech Stack:</strong> Kotlin, MVVM, Retrofit, Room
-                  </p>
-                  <p>Designed for agents to manage sales, track performance, purchase policies, and upload documents.</p>
-                  <div className="flex mt-4 space-x-2">
-                    {/* Removed GitHub button as it's an internal app */}
-                  </div>
-                </CardContent>
-              </Card>
+              <div>
+                <Card className="shadow-md rounded-lg">
+                  <CardHeader>
+                    <CardTitle>Mconnect Insurance App</CardTitle>
+                    <CardDescription>SBI Life Insurance app for agents.</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p><strong>Tech Stack:</strong> Kotlin, MVVM, Retrofit, Room</p>
+                    <p>Designed for agents to manage sales, track performance, purchase policies, and upload documents.</p>
+                    <div className="flex mt-4 space-x-2">
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
 
-              {/* Project 2 */}
-              <Card className="shadow-md rounded-lg">
-                <CardHeader>
-                  <CardTitle>Mconnect PWA</CardTitle>
-                  <CardDescription>Angular app for agents and clients, similar to the Android version.</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    <strong>Tech Stack:</strong> Angular 18, TypeScript, Material UI
-                  </p>
-                  <p>Cross-platform functionality, extending to iOS and other clients, helping agents grow the SBI Life business efficiently.</p>
-                  <div className="flex mt-4 space-x-2">
-                   </div>
-                </CardContent>
-              </Card>
+              <div>
+                <Card className="shadow-md rounded-lg">
+                  <CardHeader>
+                    <CardTitle>Mconnect PWA</CardTitle>
+                    <CardDescription>Angular app for agents and clients, similar to the Android version.</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p><strong>Tech Stack:</strong> Angular 18, TypeScript, Material UI</p>
+                    <p>Cross-platform functionality, extending to iOS and other clients, helping agents grow the SBI Life business efficiently.</p>
+                    <div className="flex mt-4 space-x-2">
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
 
-              {/* Project 3 */}
-              <Card className="shadow-md rounded-lg">
-                <CardHeader>
-                  <CardTitle>Premium Payer</CardTitle>
-                  <CardDescription>Angular app for seamless KYC validation.</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    <strong>Tech Stack:</strong> Angular, TypeScript, REST APIs
-                  </p>
-                  <p>Seamless KYC validation, supporting CKYC, EKYC, and Physical KYC processes.</p>
-                  <div className="flex mt-4 space-x-2">
-                   </div>
-                </CardContent>
-              </Card>
+              <div>
+                <Card className="shadow-md rounded-lg">
+                  <CardHeader>
+                    <CardTitle>Premium Payer</CardTitle>
+                    <CardDescription>Angular app for seamless KYC validation.</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p><strong>Tech Stack:</strong> Angular, TypeScript, REST APIs</p>
+                    <p>Seamless KYC validation, supporting CKYC, EKYC, and Physical KYC processes.</p>
+                    <div className="flex mt-4 space-x-2">
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
 
-               {/* Project 4 */}
-               <Card className="shadow-md rounded-lg">
-                <CardHeader>
-                  <CardTitle>Better You, Your Growth Buddy</CardTitle>
-                  <CardDescription>Android eBooks app with journaling and goal-setting features.</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    <strong>Tech Stack:</strong> Kotlin, Google Authentication, Play Billing
-                  </p>
-                  <p>Paid eBooks app designed for reading, with additional features for journaling, creating strategy/action plans, and setting goals.</p>
-                  <div className="flex mt-4 space-x-2">
-                    <Button variant="outline" size="sm" className="rounded-full">
-                      Play Store
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+              <div>
+                <Card className="shadow-md rounded-lg">
+                  <CardHeader>
+                    <CardTitle>Better You, Your Growth Buddy</CardTitle>
+                    <CardDescription>Android eBooks app with journaling and goal-setting features.</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p><strong>Tech Stack:</strong> Kotlin, Google Authentication, Play Billing</p>
+                    <p>Paid eBooks app designed for reading, with additional features for journaling, creating strategy/action plans, and setting goals.</p>
+                    <div className="flex mt-4 space-x-2">
+                      <PlayStoreButton />
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
 
-              {/* Project 5 */}
-              <Card className="shadow-md rounded-lg">
-                <CardHeader>
-                  <CardTitle>Collekto (Field &amp; Manage)</CardTitle>
-                  <CardDescription>Android app for loan recovery agents.</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    <strong>Tech Stack:</strong> Java, Google Maps API
-                  </p>
-                  <p>Helps agents efficiently locate and visit customers for loan recovery by integrating Google Maps API.</p>
-                  <div className="flex mt-4 space-x-2">
-                  </div>
-                </CardContent>
-              </Card>
+              <div>
+                <Card className="shadow-md rounded-lg">
+                  <CardHeader>
+                    <CardTitle>Collekto (Field & Manage)</CardTitle>
+                    <CardDescription>Android app for loan recovery agents.</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <p><strong>Tech Stack:</strong> Java, Google Maps API</p>
+                    <p>Helps agents efficiently locate and visit customers for loan recovery by integrating Google Maps API.</p>
+                    <div className="flex mt-4 space-x-2">
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </CardContent>
         </Card>
@@ -239,17 +236,12 @@ export default function Home() {
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Experience</CardTitle>
-            <CardDescription className="text-gray-600 dark:text-gray-400">
-              List of companies with roles, dates, and key contributions
-            </CardDescription>
+            <CardDescription className="text-gray-600 dark:text-gray-400">List of companies with roles, dates, and key contributions</CardDescription>
           </CardHeader>
           <CardContent className="text-gray-700 dark:text-gray-300">
-            {/* Experience 1 */}
             <div className="mb-6">
               <h3 className="font-semibold text-lg">NSEIT Pvt Ltd (Nusummit)</h3>
-              <p className="text-muted-foreground">
-                Role: Android &amp; Angular Developer | Dates: 12/2021 – Present
-              </p>
+              <p className="text-muted-foreground">Role: Android & Angular Developer | Dates: 12/2021 – Present</p>
               <ul className="list-disc list-inside mt-2 pl-4">
                 <li>Developed and maintained Android applications using Java/Kotlin and Angular web applications.</li>
                 <li>Contributed to SBI Life’s insurance platform, enabling smooth policy purchases and investment processes.</li>
@@ -257,12 +249,9 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* Experience 2 */}
             <div>
               <h3 className="font-semibold text-lg">Prolifiquetech</h3>
-              <p className="text-muted-foreground">
-                Role: Android Developer | Dates: 07/2020 – 12/2021
-              </p>
+              <p className="text-muted-foreground">Role: Android Developer | Dates: 07/2020 – 12/2021</p>
               <ul className="list-disc list-inside mt-2 pl-4">
                 <li>Developed custom Android applications, focusing on bug fixes, performance enhancements, and API integrations.</li>
                 <li>Implemented Room Database, Play Billing, Firebase, Google APIs, and maps to improve application functionality.</li>
@@ -277,21 +266,17 @@ export default function Home() {
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Contact</CardTitle>
-            <CardDescription className="text-gray-600 dark:text-gray-400">Email, Phone, GitHub, and LinkedIn profile links</CardDescription>
+            <CardDescription className="text-gray-600 dark:text-gray-400">Email, Phone, and LinkedIn profile links</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="flex space-x-4">
               <a href="mailto:thakurabhi19297@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
-                <Mail className="h-5 w-5"/>
+                <Mail className="h-5 w-5" />
               </a>
               <a href="tel:+918779007101" className="text-muted-foreground hover:text-primary transition-colors">
-                <Phone className="h-5 w-5"/>
-              </a>
-              <a href="https://github.com/abhijeetthakur1997" className="text-muted-foreground hover:text-primary transition-colors">
-                <Github className="h-5 w-5"/>
+                <Phone className="h-5 w-5" />
               </a>
               <a href="https://www.linkedin.com/in/abhijeet-thakur-443273162/" className="text-muted-foreground hover:text-primary transition-colors">
-                <Linkedin className="h-5 w-5"/>
               </a>
             </div>
             <p className="mt-4 text-gray-600 dark:text-gray-300">Kharghar, Navi Mumbai 410210</p>
@@ -301,4 +286,3 @@ export default function Home() {
     </div>
   );
 }
-
