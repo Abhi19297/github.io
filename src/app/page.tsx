@@ -109,9 +109,6 @@ export default function Home() {
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">About Me</CardTitle>
-            <CardDescription className="text-gray-600 dark:text-gray-400">
-              Experienced Android developer with a passion for creating high-quality mobile applications.
-            </CardDescription>
           </CardHeader>
           <CardContent className="text-gray-700 dark:text-gray-300">
             <p className="leading-relaxed">
@@ -128,13 +125,6 @@ export default function Home() {
               <li>RESTful APIs, JSON</li>
               <li>UI/UX Design</li>
             </ul>
-            <p className="mt-4 leading-relaxed">
-              My Android development expertise includes:
-            </p>
-            <p className="mt-4 leading-relaxed">
-              I am dedicated to writing clean, maintainable code and creating intuitive
-              user interfaces.
-            </p>
           </CardContent>
         </Card>
       </motion.section>
@@ -149,7 +139,6 @@ export default function Home() {
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Skills</CardTitle>
-            <CardDescription className="text-gray-600 dark:text-gray-400">Technical skills categorized under Mobile, Web, Tools.</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -207,7 +196,6 @@ export default function Home() {
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Projects</CardTitle>
-            <CardDescription className="text-gray-600 dark:text-gray-400">Key projects showcasing Android and Angular development skills.</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -301,7 +289,6 @@ export default function Home() {
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Experience</CardTitle>
-            <CardDescription className="text-gray-600 dark:text-gray-400">List of companies with roles, dates, and key contributions</CardDescription>
           </CardHeader>
           <CardContent className="text-gray-700 dark:text-gray-300">
             <div className="mb-6">
@@ -336,7 +323,6 @@ export default function Home() {
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Contact</CardTitle>
-            <CardDescription className="text-gray-600 dark:text-gray-400">Email and Phone</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="flex space-x-4">
