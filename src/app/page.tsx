@@ -61,6 +61,12 @@ export default function Home() {
     };
   }, []);
 
+  const slideInAnimation = {
+    initial: { x: '-100%', opacity: 0 },
+    whileInView: { x: 0, opacity: 1, transition: { duration: 0.75, ease: 'easeOut' } },
+    viewport: { once: true },
+  };
+
   return (
     <div className="container mx-auto py-10">
       {/* Hero Section */}
@@ -94,7 +100,12 @@ export default function Home() {
       </motion.section>
 
       {/* About Me */}
-      <section className="mb-12" ref={sectionRefs.current[0]}>
+      <motion.section className="mb-12" ref={sectionRefs.current[0]}
+        variants={slideInAnimation}
+        initial="initial"
+        whileInView="whileInView"
+        viewport={{ once: true }}
+      >
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">About Me</CardTitle>
@@ -126,10 +137,15 @@ export default function Home() {
             </p>
           </CardContent>
         </Card>
-      </section>
+      </motion.section>
 
       {/* Skills */}
-      <section className="mb-12" ref={sectionRefs.current[1]}>
+      <motion.section className="mb-12" ref={sectionRefs.current[1]}
+        variants={slideInAnimation}
+        initial="initial"
+        whileInView="whileInView"
+        viewport={{ once: true }}
+      >
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Skills</CardTitle>
@@ -179,10 +195,15 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
-      </section>
+      </motion.section>
 
       {/* Projects */}
-      <section className="mb-12" ref={sectionRefs.current[2]}>
+      <motion.section className="mb-12" ref={sectionRefs.current[2]}
+        variants={slideInAnimation}
+        initial="initial"
+        whileInView="whileInView"
+        viewport={{ once: true }}
+      >
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Projects</CardTitle>
@@ -190,7 +211,7 @@ export default function Home() {
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="w-full">
+              <div className="w-full h-full">
                 <Card className="shadow-md rounded-lg h-full">
                   <CardHeader>
                     <CardTitle>Mconnect Insurance App</CardTitle>
@@ -205,7 +226,7 @@ export default function Home() {
                 </Card>
               </div>
 
-              <div className="w-full">
+              <div className="w-full h-full">
                 <Card className="shadow-md rounded-lg h-full">
                   <CardHeader>
                     <CardTitle>Mconnect PWA</CardTitle>
@@ -220,7 +241,7 @@ export default function Home() {
                 </Card>
               </div>
 
-              <div className="w-full">
+              <div className="w-full h-full">
                 <Card className="shadow-md rounded-lg h-full">
                   <CardHeader>
                     <CardTitle>Premium Payer</CardTitle>
@@ -235,7 +256,7 @@ export default function Home() {
                 </Card>
               </div>
 
-              <div className="w-full">
+              <div className="w-full h-full">
                 <Card className="shadow-md rounded-lg h-full">
                   <CardHeader>
                     <CardTitle>Better You, Your Growth Buddy</CardTitle>
@@ -251,7 +272,7 @@ export default function Home() {
                 </Card>
               </div>
 
-              <div className="w-full">
+              <div className="w-full h-full">
                 <Card className="shadow-md rounded-lg h-full">
                   <CardHeader>
                     <CardTitle>Collekto (Field & Manage)</CardTitle>
@@ -268,10 +289,15 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
-      </section>
+      </motion.section>
 
       {/* Experience */}
-      <section className="mb-12" ref={sectionRefs.current[3]}>
+      <motion.section className="mb-12" ref={sectionRefs.current[3]}
+        variants={slideInAnimation}
+        initial="initial"
+        whileInView="whileInView"
+        viewport={{ once: true }}
+      >
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Experience</CardTitle>
@@ -298,10 +324,15 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
-      </section>
+      </motion.section>
 
       {/* Contact Section */}
-      <section ref={sectionRefs.current[4]}>
+      <motion.section ref={sectionRefs.current[4]}
+        variants={slideInAnimation}
+        initial="initial"
+        whileInView="whileInView"
+        viewport={{ once: true }}
+      >
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Contact</CardTitle>
@@ -319,7 +350,7 @@ export default function Home() {
             <p className="mt-4 text-gray-600 dark:text-gray-300">Kharghar, Navi Mumbai 410210</p>
           </CardContent>
         </Card>
-      </section>
+      </motion.section>
     </div>
   );
 }
