@@ -1,3 +1,4 @@
+
 'use client';
 
 import {Button} from "@/components/ui/button";
@@ -100,7 +101,7 @@ export default function Home() {
       </motion.section>
 
       {/* About Me */}
-      <motion.section className="mb-12" ref={sectionRefs.current[0]}
+      <motion.section className="mb-12 px-4 md:px-16" ref={sectionRefs.current[0]}
         variants={slideInAnimation}
         initial="initial"
         whileInView="whileInView"
@@ -109,6 +110,9 @@ export default function Home() {
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">About Me</CardTitle>
+            <CardDescription className="text-gray-600 dark:text-gray-400">
+              Experienced Android developer with a passion for creating high-quality mobile applications.
+            </CardDescription>
           </CardHeader>
           <CardContent className="text-gray-700 dark:text-gray-300">
             <p className="leading-relaxed">
@@ -125,12 +129,18 @@ export default function Home() {
               <li>RESTful APIs, JSON</li>
               <li>UI/UX Design</li>
             </ul>
+            <p className="mt-4 leading-relaxed">
+              My Android development expertise includes:
+            </p>
+            <p className="mt-4 leading-relaxed">
+              I am dedicated to writing clean, maintainable code and creating intuitive user interfaces.
+            </p>
           </CardContent>
         </Card>
       </motion.section>
 
       {/* Skills */}
-      <motion.section className="mb-12" ref={sectionRefs.current[1]}
+      <motion.section className="mb-12 px-4 md:px-16" ref={sectionRefs.current[1]}
         variants={slideInAnimation}
         initial="initial"
         whileInView="whileInView"
@@ -139,6 +149,9 @@ export default function Home() {
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Skills</CardTitle>
+            <CardDescription className="text-gray-600 dark:text-gray-400">
+              Technical skills categorized under Mobile, Web, Tools.
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -187,7 +200,7 @@ export default function Home() {
       </motion.section>
 
       {/* Projects */}
-      <motion.section className="mb-12" ref={sectionRefs.current[2]}
+      <motion.section className="mb-12 px-4 md:px-16" ref={sectionRefs.current[2]}
         variants={slideInAnimation}
         initial="initial"
         whileInView="whileInView"
@@ -196,6 +209,9 @@ export default function Home() {
         <Card className="shadow-lg rounded-lg">
           <CardHeader>
             <CardTitle className="text-2xl font-semibold">Projects</CardTitle>
+            <CardDescription className="text-gray-600 dark:text-gray-400">
+              Key projects showcasing Android and Angular development skills.
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -280,7 +296,7 @@ export default function Home() {
       </motion.section>
 
       {/* Experience */}
-      <motion.section className="mb-12" ref={sectionRefs.current[3]}
+      <motion.section className="mb-12 px-4 md:px-16" ref={sectionRefs.current[3]}
         variants={slideInAnimation}
         initial="initial"
         whileInView="whileInView"
@@ -314,7 +330,7 @@ export default function Home() {
       </motion.section>
 
       {/* Contact Section */}
-      <motion.section ref={sectionRefs.current[4]}
+      <motion.section className="px-4 md:px-16" ref={sectionRefs.current[4]}
         variants={slideInAnimation}
         initial="initial"
         whileInView="whileInView"
@@ -340,3 +356,4 @@ export default function Home() {
     </div>
   );
 }
+
