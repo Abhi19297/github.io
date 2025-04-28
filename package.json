@@ -2,11 +2,11 @@
   "name": "nextn",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Abhi19297/github.io.git",
+  "homepage": "https://Abhi19297.github.io/github.io/",
   "scripts": {
     "dev": "next dev --turbopack -p 9002",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d out",
     "genkit:dev": "genkit start -- tsx src/ai/dev.ts",
     "genkit:watch": "genkit start -- tsx --watch src/ai/dev.ts",
     "build": "next build",
